@@ -21,3 +21,10 @@ docker_image(
 # poetry_requirements(
 #     name="poetry",
 # )
+
+# python_sources(
+#     name="pkg",
+#     dependencies=[
+#         "3rdparty/python:grpc#grpcio",
+#     ]
+# )

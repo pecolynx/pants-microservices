@@ -29,10 +29,13 @@ interpreter_constraints = [">=3.11,<3.12"]
 
 enable_resolves = true
 
+
 [source]
 root_patterns = [
   "/src/python/microservices",
-  "/src/protos/helloworld/v1",
+  # "/src/protos/helloworld/v1",
+  # "/src/python",
+  "/src/protos",
 ]
 
 [python.resolves]

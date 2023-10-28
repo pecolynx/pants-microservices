@@ -1,10 +1,14 @@
 from microservices.domain.user import User
 
-from microservices.config.container import Container
-# from helloworld.v1 import helloworld_pb2_grpc
+# from microservices.config.container import Container
+from helloworld.v1 import helloworld_pb2_grpc
+# from protos.helloworld.v1 import helloworld_pb2_grpc
+# import  v1.helloworld_pb2_grpc
 
 print("hello")
 print("hello")
+x = helloworld_pb2_grpc.GreeterServicer()
+print(x)
 
 user = User()
 print(user)
