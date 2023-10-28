@@ -9,11 +9,12 @@ backend_packages = [
   "pants.backend.docker",
   "pants.backend.docker.lint.hadolint",
   "pants.backend.python",
+
   # "pants.backend.python.lint.bandit",
   "pants.backend.python.lint.black",
   "pants.backend.python.lint.docformatter",
   "pants.backend.python.lint.flake8",
-#   "pants.backend.python.lint.isort",
+  "pants.backend.python.lint.isort",
 #   "pants.backend.python.lint.pylint",
 #   "pants.backend.python.typecheck.mypy",
 
@@ -35,6 +36,7 @@ flake8 = "3rdparty/python/flake8.lock"
 mypy = "3rdparty/python/mypy.lock"
 # bandit = "3rdparty/python/bandit.lock"
 black = "3rdparty/python/black.lock"
+isort = "3rdparty/python/isort.lock"
 # pytest = "3rdparty/python/pytest.lock"
 docformatter = "3rdparty/python/docformatter.lock"
 
@@ -60,10 +62,10 @@ config = "build-support/flake8.config"
 install_from_resolve = "flake8"
 requirements = ["//3rdparty/python:flake8"]
 
-# [isort]
-# version = "isort==5.9.3"
+[isort]
 # config = ["build-support/pyproject.toml"]
-# lockfile = "build-support/isort_lockfile.txt"
+install_from_resolve = "isort"
+requirements = ["//3rdparty/python:isort"]
 
 # [mypy]
 # config = "build-support/pyproject.toml"
