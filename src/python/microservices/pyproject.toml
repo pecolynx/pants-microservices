@@ -11,6 +11,7 @@ python = "^3.11"
 grpcio = "^1.59.0"
 protobuf = "^4.24.4"
 dependency-injector = "^4.41.0"
+pyaml-env = "^1.2.1"
 
 
 [build-system]

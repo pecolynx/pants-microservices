@@ -3,6 +3,7 @@ import logging
 from dependency_injector import containers, providers
 
 logger = logging.getLogger(__name__)
+from helloworld.v1.helloworld_pb2_grpc import GreeterServicer
 
 
 # def repository_factory_func(session) -> RepositoryFactory:
@@ -26,3 +27,6 @@ class Container(containers.DeclarativeContainer):
     #     session_factory=db.provided.session,
     #     repository_factory_func=repository_factory_func,
     # )
+    greeter_servicer = providers.Singleton(
+        GreeterServicer,
+    )

@@ -4,8 +4,6 @@ APP_IMAGE:=microservices
 
 SHELL=/bin/bash
 
-
-
 .PHONY: all
 all:
 	$(PANTS) check ::
@@ -80,6 +78,9 @@ generate-lockfiles-grpc:
 generate-lockfiles-protobuf:
 	$(PANTS) generate-lockfiles --resolve=protobuf
 
+.PHONY: export-codegen
+export_codegen:
+	$(PANTS) export-codegen :: 
 
 .PHONY: test
 test:

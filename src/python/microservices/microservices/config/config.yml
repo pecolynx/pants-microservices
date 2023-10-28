@@ -1,0 +1,4 @@
+---
+app:
+  grpcPort: 50051
+  metricsPort: 8081
