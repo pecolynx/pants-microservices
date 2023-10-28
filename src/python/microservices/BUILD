@@ -1,6 +1,6 @@
-poetry_requirements(
-    name="poetry",
-)
+# poetry_requirements(
+#     name="poetry",
+# )
 
 pex_binary(
     name="microservices",
@@ -17,3 +17,4 @@ docker_image(
     image_tags=["{build_args.GIT_COMMIT}"],
     repository="microservices",
 )
+

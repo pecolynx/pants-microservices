@@ -2,6 +2,6 @@ FROM python:3.11.2-slim-buster
 
 WORKDIR /opt/app
 
-COPY python.stock-radar-app/stock-radar-app.pex /opt/app/stock-radar-app.pex
+COPY src.python.microservices/microservices.pex /opt/app/microservices.pex
 
-ENTRYPOINT ["/bin/bash", "-c", "/opt/app/stock-radar-app.pex"]
+ENTRYPOINT ["/bin/bash", "-c", "/opt/app/microservices.pex"]

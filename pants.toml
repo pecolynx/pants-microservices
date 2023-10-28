@@ -29,6 +29,11 @@ interpreter_constraints = [">=3.11,<3.12"]
 
 enable_resolves = true
 
+[source]
+root_patterns = [
+  "/src/python/microservices",
+  "/src/protos/helloworld/v1",
+]
 
 [python.resolves]
 python-default = "3rdparty/python/default.lock"
