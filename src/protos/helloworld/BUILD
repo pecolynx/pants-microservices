@@ -1,1 +1,4 @@
-protobuf_sources()
+protobuf_sources(
+
+    # python_resolve="grpc",
+)

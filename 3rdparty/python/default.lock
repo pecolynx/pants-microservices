@@ -9,7 +9,8 @@
 //     "CPython<3.12,>=3.11"
 //   ],
 //   "generated_with_requirements": [
-//     "grpcio<2.0.0,>=1.59.0"
+//     "dependency-injector==4.41.0",
+//     "grpcio==1.59.0"
 //   ],
 //   "manylinux": "manylinux2014",
 //   "requirement_constraints": [],
@@ -27,6 +28,60 @@
   "locked_resolves": [
     {
       "locked_requirements": [
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "3055b3fc47a0d6e5f27defb4166c0d37543a4967c279549b154afaf506ce6efc",
+              "url": "https://files.pythonhosted.org/packages/70/e3/b06670838480b3a4d5f0cda7f20af758a75fcb07e481a927befc940d766b/dependency_injector-4.41.0-cp311-cp311-musllinux_1_1_x86_64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "b8b61a15bc46a3aa7b29bd8a7384b650aa3a7ef943491e93c49a0540a0b3dda4",
+              "url": "https://files.pythonhosted.org/packages/0c/c5/96541fc93082f4b9625f563dc8325609cfa9e17767c8fee45285d97784de/dependency_injector-4.41.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "05e15ea0f2b14c1127e8b0d1597fef13f98845679f63bf670ba12dbfc12a16ef",
+              "url": "https://files.pythonhosted.org/packages/18/b0/cffa6a9ce1a3884288dbc5ab822f99ddc68fb951a6e215fd404f2765229c/dependency_injector-4.41.0-cp311-cp311-musllinux_1_1_i686.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "5fa3ed8f0700e47a0e7363f949b4525ffa8277aa1c5b10ca5b41fce4dea61bb9",
+              "url": "https://files.pythonhosted.org/packages/31/3a/f23b605afc2f4cc21966d2bdbba136ca13e11101e9baf21fd2ffeccf4b1e/dependency_injector-4.41.0-cp311-cp311-musllinux_1_1_aarch64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "a4f113e5d4c3070973ad76e5bda7317e500abae6083d78689f0b6e37cf403abf",
+              "url": "https://files.pythonhosted.org/packages/67/3e/187ac8c222fb6f7bf43d1e7c4356dc477411fb00f60ea380e0408ecf00ef/dependency_injector-4.41.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "786f7aac592e191c9caafc47732161d807bad65c62f260cd84cd73c7e2d67d6d",
+              "url": "https://files.pythonhosted.org/packages/76/66/725de4e810b2f4cc8001c6c29bcfa9d66fd7ff3d4a7094b76c40965c56a3/dependency_injector-4.41.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "939dfc657104bc3e66b67afd3fb2ebb0850c9a1e73d0d26066f2bbdd8735ff9c",
+              "url": "https://files.pythonhosted.org/packages/eb/c5/ec73412b4b460fe1ebeef8380d1aee5e8bd0374a2e234a05b5d40b0b3db0/dependency-injector-4.41.0.tar.gz"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "89c67edffe7007cf33cee79ecbca38f48efcc2add5c280717af434db6c789377",
+              "url": "https://files.pythonhosted.org/packages/ff/50/04b4a98d189c08719c0ad22c1fcc6920d5eb6baf3bfb137ce7fba8357e8d/dependency_injector-4.41.0-cp311-cp311-macosx_10_9_x86_64.whl"
+            }
+          ],
+          "project_name": "dependency-injector",
+          "requires_dists": [
+            "aiohttp; extra == \"aiohttp\"",
+            "flask; extra == \"flask\"",
+            "pydantic; extra == \"pydantic\"",
+            "pyyaml; extra == \"yaml\"",
+            "six<=1.16.0,>=1.7.0"
+          ],
+          "requires_python": null,
+          "version": "4.41.0"
+        },
         {
           "artifacts": [
             {
@@ -76,6 +131,24 @@
           ],
           "requires_python": ">=3.7",
           "version": "1.59.0"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254",
+              "url": "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
+              "url": "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+            }
+          ],
+          "project_name": "six",
+          "requires_dists": [],
+          "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+          "version": "1.16.0"
         }
       ],
       "platform_tag": null
@@ -86,7 +159,8 @@
   "pip_version": "23.1.2",
   "prefer_older_binary": false,
   "requirements": [
-    "grpcio<2.0.0,>=1.59.0"
+    "dependency-injector==4.41.0",
+    "grpcio==1.59.0"
   ],
   "requires_python": [
     "<3.12,>=3.11"

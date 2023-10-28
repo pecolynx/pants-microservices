@@ -18,3 +18,6 @@ docker_image(
     repository="microservices",
 )
 
+# poetry_requirements(
+#     name="poetry",
+# )
