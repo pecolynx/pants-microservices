@@ -4,11 +4,11 @@ python_requirements(
     resolve="mypy",
 )
 
-# python_requirements(
-#     name="bandit",
-#     source="bandit-requirements.txt",
-#     resolve="bandit",
-# )
+python_requirements(
+    name="bandit",
+    source="bandit-requirements.txt",
+    resolve="bandit",
+)
 
 python_requirements(
     name="black",
