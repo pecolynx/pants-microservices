@@ -12,7 +12,7 @@ backend_packages = [
   # "pants.backend.python.lint.bandit",
   "pants.backend.python.lint.black",
   "pants.backend.python.lint.docformatter",
-#   "pants.backend.python.lint.flake8",
+  "pants.backend.python.lint.flake8",
 #   "pants.backend.python.lint.isort",
 #   "pants.backend.python.lint.pylint",
 #   "pants.backend.python.typecheck.mypy",
@@ -31,7 +31,7 @@ enable_resolves = true
 [python.resolves]
 python-default = "3rdparty/python/default.lock"
 # python-default = "3rdparty/python/user_reqs.lock"
-# flake8 = "3rdparty/python/flake8.lock"
+flake8 = "3rdparty/python/flake8.lock"
 mypy = "3rdparty/python/mypy.lock"
 # bandit = "3rdparty/python/bandit.lock"
 black = "3rdparty/python/black.lock"
@@ -55,10 +55,10 @@ requirements = ["//3rdparty/python:black"]
 install_from_resolve = "docformatter"
 requirements = ["//3rdparty/python:docformatter"]
 
-# [flake8]
-# version = "flake8==5.0.4"
-# config = "build-support/flake8.config"
-# lockfile = "build-support/flake8_lockfile.txt"
+[flake8]
+config = "build-support/flake8.config"
+install_from_resolve = "flake8"
+requirements = ["//3rdparty/python:flake8"]
 
 # [isort]
 # version = "isort==5.9.3"

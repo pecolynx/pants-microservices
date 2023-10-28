@@ -52,6 +52,10 @@ generate-lockfiles-black:
 generate-lockfiles-docformatter:
 	$(PANTS) generate-lockfiles --resolve=docformatter
 
+.PHONY: generate-lockfiles-flake8
+generate-lockfiles-flake8:
+	$(PANTS) generate-lockfiles --resolve=flake8
+
 
 
 .PHONY: package
