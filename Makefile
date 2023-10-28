@@ -72,7 +72,18 @@ generate-lockfiles-pytest:
 generate-lockfiles-coverage:
 	$(PANTS) generate-lockfiles --resolve=coverage
 
+.PHONY: generate-lockfiles-grpc
+generate-lockfiles-grpc:
+	$(PANTS) generate-lockfiles --resolve=grpc
 
+.PHONY: generate-lockfiles-protobuf
+generate-lockfiles-protobuf:
+	$(PANTS) generate-lockfiles --resolve=protobuf
+
+
+.PHONY: test
+test:
+	$(PANTS) test ::
 
 .PHONY: package
 package:

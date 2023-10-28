@@ -45,3 +45,15 @@ python_requirements(
     source="pytest-requirements.txt",
     resolve="pytest",
 )
+
+python_requirements(
+    name="grpc",
+    source="grpc-requirements.txt",
+    resolve="grpc",
+)
+
+python_requirements(
+    name="protobuf",
+    source="protobuf-requirements.txt",
+    resolve="protobuf",
+)

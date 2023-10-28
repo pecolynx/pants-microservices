@@ -6,6 +6,7 @@ print_stacktrace = true
 backend_packages = [
   # "pants.backend.build_files.fmt.black",
   "pants.backend.codegen.protobuf.python",
+  "pants.backend.codegen.protobuf.lint.buf",
   "pants.backend.docker",
   "pants.backend.docker.lint.hadolint",
   "pants.backend.python",
@@ -39,10 +40,15 @@ isort = "3rdparty/python/isort.lock"
 pylint = "3rdparty/python/pylint.lock"
 pytest = "3rdparty/python/pytest.lock"
 docformatter = "3rdparty/python/docformatter.lock"
+grpc = "3rdparty/python/grpc.lock"
+protobuf = "3rdparty/python/protobuf.lock"
 # coverage = "3rdparty/python/coverage.lock"
 
 [docker]
 build_args = ["GIT_COMMIT"]
+
+[python-protobuf]
+mypy_plugin = true
 
 [test]
 use_coverage = true

@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 grpcio = "^1.59.0"
+protobuf = "^4.24.4"
 
 
 [build-system]
