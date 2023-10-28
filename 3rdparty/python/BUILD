@@ -34,3 +34,9 @@ python_requirements(
     resolve="isort",
 )
 
+python_requirements(
+    name="pylint",
+    source="pylint-requirements.txt",
+    resolve="pylint",
+)
+

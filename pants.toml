@@ -15,7 +15,7 @@ backend_packages = [
   "pants.backend.python.lint.docformatter",
   "pants.backend.python.lint.flake8",
   "pants.backend.python.lint.isort",
-#   "pants.backend.python.lint.pylint",
+  "pants.backend.python.lint.pylint",
   "pants.backend.python.typecheck.mypy",
 
   "pants.backend.python.mixed_interpreter_constraints",
@@ -36,6 +36,7 @@ mypy = "3rdparty/python/mypy.lock"
 bandit = "3rdparty/python/bandit.lock"
 black = "3rdparty/python/black.lock"
 isort = "3rdparty/python/isort.lock"
+pylint = "3rdparty/python/pylint.lock"
 # pytest = "3rdparty/python/pytest.lock"
 docformatter = "3rdparty/python/docformatter.lock"
 
@@ -71,16 +72,16 @@ config = "build-support/pyproject.toml"
 install_from_resolve = "mypy"
 requirements = ["//3rdparty/python:mypy"]
 
+[pylint]
+install_from_resolve = "pylint"
+requirements = ["//3rdparty/python:pylint"]
+config = "build-support/pylint.config"
 
 # [mypy-protobuf]
 # version = "mypy-protobuf==2.10"
 # # config = "build-support/pyproject.toml"
 # lockfile = "build-support/mypy_protobuf_lockfile.txt"
 
-# [pylint]
-# version = "pylint==2.13.0"
-# config = "build-support/pylint.config"
-# lockfile = "build-support/pylint_lockfile.txt"
 
 # [pytest]
 # version = "pytest==7.0.1"

@@ -60,6 +60,10 @@ generate-lockfiles-flake8:
 generate-lockfiles-isort:
 	$(PANTS) generate-lockfiles --resolve=isort
 
+.PHONY: generate-lockfiles-pylint
+generate-lockfiles-pylint:
+	$(PANTS) generate-lockfiles --resolve=pylint
+
 
 
 .PHONY: package
