@@ -16,7 +16,7 @@ backend_packages = [
   "pants.backend.python.lint.flake8",
   "pants.backend.python.lint.isort",
 #   "pants.backend.python.lint.pylint",
-#   "pants.backend.python.typecheck.mypy",
+  "pants.backend.python.typecheck.mypy",
 
   "pants.backend.python.mixed_interpreter_constraints",
 ]
@@ -31,7 +31,6 @@ enable_resolves = true
 
 [python.resolves]
 python-default = "3rdparty/python/default.lock"
-# python-default = "3rdparty/python/user_reqs.lock"
 flake8 = "3rdparty/python/flake8.lock"
 mypy = "3rdparty/python/mypy.lock"
 bandit = "3rdparty/python/bandit.lock"
@@ -67,10 +66,10 @@ requirements = ["//3rdparty/python:flake8"]
 install_from_resolve = "isort"
 requirements = ["//3rdparty/python:isort"]
 
-# [mypy]
-# config = "build-support/pyproject.toml"
-# install_from_resolve = "mypy"
-# requirements = ["//3rdparty/python:mypy"]
+[mypy]
+config = "build-support/pyproject.toml"
+install_from_resolve = "mypy"
+requirements = ["//3rdparty/python:mypy"]
 
 
 # [mypy-protobuf]
