@@ -64,6 +64,14 @@ generate-lockfiles-isort:
 generate-lockfiles-pylint:
 	$(PANTS) generate-lockfiles --resolve=pylint
 
+.PHONY: generate-lockfiles-pytest
+generate-lockfiles-pytest:
+	$(PANTS) generate-lockfiles --resolve=pytest
+
+.PHONY: generate-lockfiles-coverage
+generate-lockfiles-coverage:
+	$(PANTS) generate-lockfiles --resolve=coverage
+
 
 
 .PHONY: package

@@ -37,11 +37,18 @@ bandit = "3rdparty/python/bandit.lock"
 black = "3rdparty/python/black.lock"
 isort = "3rdparty/python/isort.lock"
 pylint = "3rdparty/python/pylint.lock"
-# pytest = "3rdparty/python/pytest.lock"
+pytest = "3rdparty/python/pytest.lock"
 docformatter = "3rdparty/python/docformatter.lock"
+# coverage = "3rdparty/python/coverage.lock"
 
 [docker]
 build_args = ["GIT_COMMIT"]
+
+[test]
+use_coverage = true
+output = "all"
+report = true
+report_dir = "reports"
 
 [bandit]
 config = "build-support/bandit.yaml"
@@ -77,13 +84,14 @@ install_from_resolve = "pylint"
 requirements = ["//3rdparty/python:pylint"]
 config = "build-support/pylint.config"
 
+[pytest]
+install_from_resolve = "pytest"
+requirements = ["//3rdparty/python:pytest"]
+config = "build-support/pyproject.toml"
+
+
 # [mypy-protobuf]
 # version = "mypy-protobuf==2.10"
 # # config = "build-support/pyproject.toml"
 # lockfile = "build-support/mypy_protobuf_lockfile.txt"
 
-
-# [pytest]
-# version = "pytest==7.0.1"
-# config = "build-support/pyproject.toml"
-# lockfile = "build-support/pytest_lockfile.txt"
