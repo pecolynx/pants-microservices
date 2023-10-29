@@ -47,8 +47,6 @@ print(user)
 def run(
     greeter_servicer: GreeterServicer = Provide[Container.greeter_servicer],
 ):
-    pass
-
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     helloworld_pb2_grpc.add_GreeterServicer_to_server(greeter_servicer, server)
     # calc_pb2_grpc.add_CalculatorServicer_to_server(Calculator(), server)

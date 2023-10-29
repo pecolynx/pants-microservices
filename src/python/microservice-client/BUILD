@@ -2,10 +2,11 @@
 #     name="reqs",
 #     requirements=[
 #         "grpcio==1.59.0",
-#         "dependency-injector==4.41.0",
-#         "protobuf==4.24.4",
-#         "pyaml-env==1.2.1",
 #     ],
+# )
+
+# poetry_requirements(
+#     name="poetry",
 # )
 
 python_sources(
@@ -20,32 +21,15 @@ python_sources(
 
         # "3rdparty/python:reqs#dependency-injector",
 
-        "src/python/microservices/microservices/**/*.py",
+        "src/python/microservice-client/microservice_client/**/*.py",
     ]
 )
 
 pex_binary(
-    name="microservices",
-    entry_point="microservices/main.py",
+    name="microservice-client",
+    entry_point="microservice_client/main.py",
     dependencies=[
         ":src",
     ],
     restartable=True,
 )
-
-docker_image(
-    name="docker",
-    image_tags=["{build_args.GIT_COMMIT}"],
-    repository="microservices",
-)
-
-# poetry_requirements(
-#     name="poetry",
-# )
-
-# python_sources(
-#     name="pkg",
-#     dependencies=[
-#         "3rdparty/python:grpc#grpcio",
-#     ]
-# )

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "microservice-client"
+version = "0.1.0"
+description = ""
+authors = ["pecolynx <pecolynx@gmail.com>"]
+readme = "README.md"
+packages = [{include = "microservice_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+grpc-stubs = "^1.53.0.3"
+grpcio = "1.59.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

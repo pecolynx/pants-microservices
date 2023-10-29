@@ -1,6 +1,8 @@
 PANTS:=pants
 APP_NAME:=microservices
 APP_IMAGE:=microservices
+CLIENT_APP_NAME:=microservice_client
+CLIENT_APP_IMAGE:=microservice-client
 
 SHELL=/bin/bash
 
@@ -94,7 +96,7 @@ package:
 update-build-files:
 	$(PANTS) update-build-files ::
 
-#
+# microservices
 .PHONY: microservices-package
 microservices-package:
 	GIT_COMMIT='latest' $(PANTS) package src/python/$(APP_IMAGE):
@@ -106,3 +108,16 @@ microservices-run-binary:
 .PHONY: microservices-run-python
 microservices-run-python:
 	$(PANTS) run src/python/$(APP_IMAGE)/$(APP_NAME)/main.py
+
+# microservice-client
+.PHONY: microservice-client-package
+microservice-client-package:
+	GIT_COMMIT='latest' $(PANTS) package src/python/$(CLIENT_APP_IMAGE):
+
+.PHONY: microservice-client-run-binary
+microservice-client-run-binary:
+	$(PANTS) run src/python/$(CLIENT_APP_IMAGE):$(CLIENT_APP_IMAGE)
+
+.PHONY: microservice-client-run-python
+microservice-client-run-python:
+	$(PANTS) run src/python/$(CLIENT_APP_IMAGE)/$(CLIENT_APP_NAME)/main.py

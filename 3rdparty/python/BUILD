@@ -1,3 +1,12 @@
+python_requirement(
+    requirements=[
+        "grpcio==1.59.0",
+        "dependency-injector==4.41.0",
+        "protobuf==4.24.4",
+        "pyaml-env==1.2.1",
+    ],
+)
+
 python_requirements(
     name="mypy",
     source="mypy-requirements.txt",

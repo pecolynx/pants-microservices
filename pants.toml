@@ -33,6 +33,7 @@ enable_resolves = true
 [source]
 root_patterns = [
   "/src/python/microservices",
+  "/src/python/microservice-client",
   # "/src/protos/helloworld/v1",
   # "/src/python",
   "/src/protos",
