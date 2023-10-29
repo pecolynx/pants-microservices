@@ -1,6 +1,6 @@
-from helloworld.v1 import helloworld_pb2_grpc
-from helloworld.v1.helloworld_pb2 import HelloRequest, HelloReply
 from microservices.usecase.greeter_usecase import GreeterUsecase
+from microservices_helloworld.v1 import helloworld_pb2_grpc
+from microservices_helloworld.v1.helloworld_pb2 import HelloReply, HelloRequest
 
 
 class GreeterServicer(helloworld_pb2_grpc.GreeterServicer):

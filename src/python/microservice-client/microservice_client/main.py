@@ -1,8 +1,7 @@
 import logging
 
 import grpc
-from helloworld.v1 import helloworld_pb2
-from helloworld.v1 import helloworld_pb2_grpc
+from microservice_client_helloworld.v1 import helloworld_pb2, helloworld_pb2_grpc
 
 
 def run():
@@ -14,6 +13,7 @@ def run():
         stub = helloworld_pb2_grpc.GreeterStub(channel)
         response = stub.SayHello(helloworld_pb2.HelloRequest(name="xx"))
     print("Greeter client received: " + response.message)
+
 
 if __name__ == "__main__":
     logging.basicConfig()

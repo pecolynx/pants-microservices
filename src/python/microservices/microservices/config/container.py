@@ -1,17 +1,16 @@
 import logging
 
 from dependency_injector import containers, providers
-
 from microservices.controller.greeter_servicer import GreeterServicer
-
 from microservices.usecase.greeter_usecase import GreeterUsecase
-
 
 # def repository_factory_func(session) -> RepositoryFactory:
 #     return RepositoryFactory(session)
 
 
 logger = logging.getLogger(__name__)
+
+
 class Container(containers.DeclarativeContainer):
     logger.info("Container")
     # wiring_config = containers.WiringConfiguration(

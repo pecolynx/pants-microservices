@@ -10,6 +10,7 @@
 
 python_sources(
     name="src",
+    resolve="microservices",
     dependencies=[
         # "src/python/microservices/microservices",
         # "src/python/microservices/microservices/domain",
@@ -26,6 +27,7 @@ python_sources(
 
 pex_binary(
     name="microservices",
+    resolve="microservices",
     entry_point="microservices/main.py",
     dependencies=[
         ":src",

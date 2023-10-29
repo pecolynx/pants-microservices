@@ -11,22 +11,15 @@
 
 python_sources(
     name="src",
+    resolve="microservice-client",
     dependencies=[
-        # "src/python/microservices/microservices",
-        # "src/python/microservices/microservices/domain",
-        # "src/python/microservices/microservices/controller",
-        # "3rdparty/python:reqs#grpciox",
-        # "3rdparty/python:reqs#protobuf",
-        # "3rdparty/python:reqs#pyaml-env",
-
-        # "3rdparty/python:reqs#dependency-injector",
-
         "src/python/microservice-client/microservice_client/**/*.py",
     ]
 )
 
 pex_binary(
     name="microservice-client",
+    resolve="microservice-client",
     entry_point="microservice_client/main.py",
     dependencies=[
         ":src",

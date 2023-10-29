@@ -6,7 +6,7 @@ print_stacktrace = true
 backend_packages = [
   # "pants.backend.build_files.fmt.black",
   "pants.backend.codegen.protobuf.python",
-  "pants.backend.codegen.protobuf.lint.buf",
+  # "pants.backend.codegen.protobuf.lint.buf",
   "pants.backend.docker",
   "pants.backend.docker.lint.hadolint",
   "pants.backend.python",
@@ -41,6 +41,8 @@ root_patterns = [
 
 [python.resolves]
 python-default = "3rdparty/python/default.lock"
+microservice-client = "3rdparty/python/microservice-client.lock"
+microservices = "3rdparty/python/microservices.lock"
 flake8 = "3rdparty/python/flake8.lock"
 mypy = "3rdparty/python/mypy.lock"
 bandit = "3rdparty/python/bandit.lock"
@@ -85,7 +87,7 @@ install_from_resolve = "flake8"
 requirements = ["//3rdparty/python:flake8"]
 
 [isort]
-# config = ["build-support/pyproject.toml"]
+config = ["build-support/pyproject.toml"]
 install_from_resolve = "isort"
 requirements = ["//3rdparty/python:isort"]
 

@@ -1,6 +1,25 @@
 python_requirement(
     requirements=[
         "grpcio==1.59.0",
+        "protobuf==4.24.4",
+    ],
+)
+
+python_requirement(
+    name="microservice-client",
+    resolve="microservice-client",
+    requirements=[
+        "grpcio==1.59.0",
+        "protobuf==4.24.4",
+        "dependency-injector==4.40.0",
+    ],
+)
+
+python_requirement(
+    name="microservices",
+    resolve="microservices",
+    requirements=[
+        "grpcio==1.59.0",
         "dependency-injector==4.41.0",
         "protobuf==4.24.4",
         "pyaml-env==1.2.1",

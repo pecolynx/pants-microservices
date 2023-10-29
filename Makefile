@@ -81,7 +81,7 @@ generate-lockfiles-protobuf:
 	$(PANTS) generate-lockfiles --resolve=protobuf
 
 .PHONY: export-codegen
-export_codegen:
+export-codegen:
 	$(PANTS) export-codegen :: 
 
 .PHONY: test
